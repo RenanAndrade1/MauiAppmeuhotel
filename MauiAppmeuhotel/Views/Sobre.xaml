@@ -4,34 +4,39 @@
              x:Class="MauiAppmeuhotel.Views.Sobre"
              Title="Sobre"
              NavigationPage.HasNavigationBar="False">
-   
-    <VerticalStackLayout>
-        
-        <Label 
+
+    
+        <VerticalStackLayout VerticalOptions="Center"
+                             Padding="10"
+                             Spacing="10">
+
+            <Label 
             Text="Sobre o aplicativo:"
             FontFamily="PassionOneRegular"
             FontSize="50"
-            TextColor="{StaticResource MidnightBlue}"
+            TextColor="#243B53"
             Margin="10"/>
 
-        <Label 
+            <Label 
             Text="Este aplicativo foi desenvolvido por Renan de Andrade Silva."
             FontSize="25"
             Margin="20"/>
 
-        <Label 
+            <Label 
             Text="Data de inicio do desenvolvimento:"
             FontSize="25"
             Margin="20"
             />
 
-        <Grid RowDefinitions="Auto, Auto"
+            <Grid RowDefinitions="Auto, Auto"
              ColumnDefinitions="*, *, 2*">
-            
-            <Label Grid.Row="1" Grid.Column="0" Text="07" FontSize="20" Margin="20"/>
-            <Label Grid.Row="1" Grid.Column="1" Text="11" FontSize="20" Margin="20"/>
-            <Label Grid.Row="1" Grid.Column="2" Text="2026" FontSize="20" Margin="20"/>
 
-        </Grid>
-    </VerticalStackLayout>
+                <Label Grid.Row="1" Grid.Column="0" Text="07" FontSize="20" Margin="20"/>
+                <Label Grid.Row="1" Grid.Column="1" Text="11" FontSize="20" Margin="20"/>
+                <Label Grid.Row="1" Grid.Column="2" Text="2026" FontSize="20" Margin="20"/>
+
+
+            </Grid>
+        </VerticalStackLayout>
+        
 </ContentPage>

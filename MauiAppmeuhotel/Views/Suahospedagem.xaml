@@ -4,7 +4,7 @@
              x:Class="MauiAppmeuhotel.Views.Suahospedagem"
              Title="Suahospedagem"
              NavigationPage.HasNavigationBar="False"
-             BackgroundColor="{StaticResource White}">
+             BackgroundColor="#F4F1EA">
     <VerticalStackLayout VerticalOptions="Center"
                          Padding="10"
                          Spacing="10">
@@ -12,9 +12,15 @@
         <Label Text="Cálculo da Diária"
                FontFamily="PassionOneRegular"
                FontSize="50"
-               TextColor="{StaticResource MidnightBlue}" />
+               TextColor="#243B53" />
 
-        <Border Padding="10">
+        <Border Padding="10"
+        Margin="10"
+        Background="White"
+        Stroke="#D3D3D3"
+        StrokeThickness="1"
+        StrokeShape="RoundRectangle 10">
+
             <VerticalStackLayout>
                 <Grid RowDefinitions="Auto, Auto"
                       ColumnDefinitions="*, *, 2*">
@@ -23,7 +29,7 @@
                            Text="Adultos:"/>
 
                     <Label Grid.Row="0" Grid.Column="1"
-                           TextColor="{StaticResource MidnightBlue}"
+                           TextColor= "#243B53"
                            Text="{Binding Value}"
                            BindingContext="{x:Reference stp_adultos}"/>
 
@@ -37,7 +43,7 @@
                            Text="Crianças:" />
 
                     <Label Grid.Row="1" Grid.Column="1"
-                           TextColor="{StaticResource MidnightBlue}"
+                           TextColor= "#243B53"
                            Text="{Binding Value}"
                            BindingContext="{x:Reference stp_criancas}"/>
 
@@ -48,31 +54,52 @@
                              Increment="1" />
                 </Grid>
 
-                <Border Padding="10" Margin="10">
+
+                <Border Padding="10"
+               Background="White"
+               Stroke="#D3D3D3"
+               StrokeThickness="1"
+               StrokeShape="RoundRectangle 10">
                     <VerticalStackLayout>
 
                         <Label Text="Escolha sua Suíte"
                                TextTransform="Uppercase"
                                FontSize="18"
-                               TextColor="{StaticResource MidnightBlue}"/>
+                               TextColor= "#243B53"/>
 
                         <Picker x:Name="pck_quarto"
-                                Title="Selecione sua Acomodação" />
+                                Title="Selecione sua Acomodação" 
+                                ItemDisplayBinding="{Binding Descricao}"/>
                     </VerticalStackLayout>
+
+                    <Border.Shadow>
+
+                        <Shadow Brush="Black"
+                        Offset="0,3"
+                        Radius="8"
+                       Opacity="0.20"/>
+                    </Border.Shadow>
+
                 </Border>
 
                 <Border Padding="10"
-                       Margin="10">
+                      Margin="10"
+                      Background="White"
+                      Stroke="#D3D3D3"
+                      StrokeThickness="1"
+                       StrokeShape="RoundRectangle 10">
+
                     <VerticalStackLayout Spacing="10">
 
                         <Label Text="Período da Estadia"
                                TextTransform="Uppercase"
                                FontSize="Subtitle"
-                               TextColor="{StaticResource MidnightBlue}"/>
+                               TextColor= "#243B53"/>
 
                         <HorizontalStackLayout HorizontalOptions="Center">
                             <Label Text="Check-in:" />
                             <DatePicker x:Name="dtpck_checkin"
+                                        DateSelected="dtpck_checkin_DateSelected"
                                         Format="dd/MM/yyyy" />
                         </HorizontalStackLayout>
 
@@ -84,12 +111,37 @@
                     </VerticalStackLayout>
                 </Border>
 
-                <Button Text="Sobre" 
-                   Clicked="Btn_sobre_clicked" />
-               
-               
+                <Border Padding="10"
+                            Margin="10"
+                           Background="White"
+                           Stroke="#D3D3D3"
+                           StrokeThickness="1"
+                        StrokeShape="RoundRectangle 10">
+
+                    <VerticalStackLayout>
+
+                        <Button Text="Sobre"
+                                BackgroundColor="#243B53"
+                                TextColor="White"
+                                Clicked="Btn_sobre_clicked"/>
+
+                        <Button Text="Próximo"
+                               Margin="0,10" 
+                               BackgroundColor="#243B53"
+                               TextColor="White"
+                               Clicked="Btn_proximo_clicked"/>
+                        
+                        <Button Text="Nossos quartos"
+                               BackgroundColor="#243B53"
+                               TextColor="White"
+                               Clicked="Btn_nossoshoteis_clicked"/>
+
+                    </VerticalStackLayout>
+
+                </Border>
 
             </VerticalStackLayout>
+
         </Border>
 
     </VerticalStackLayout>

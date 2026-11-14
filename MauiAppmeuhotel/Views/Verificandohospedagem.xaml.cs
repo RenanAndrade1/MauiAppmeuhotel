@@ -6,4 +6,8 @@ public partial class Verificandohospedagem : ContentPage
 	{
 		InitializeComponent();
 	}
+	private async void Btn_voltar_clicked(object sender, EventArgs e)
+    {
+        await Navigation.PopAsync();
+    }
 }

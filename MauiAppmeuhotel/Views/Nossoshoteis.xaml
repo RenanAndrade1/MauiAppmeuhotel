@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiAppmeuhotel.Views.Nossoshoteis"
+             Title="Nossoshoteis"
+             NavigationPage.HasNavigationBar="False"
+             BackgroundColor="#F4F1EA">
+   
+    <VerticalStackLayout VerticalOptions="Center"
+                         Padding="10"
+                         Spacing="10">
+       
+        <Label Text="Conheça nossos Quartos:"
+                FontFamily="PassionOneRegular"
+               FontSize="30"
+                HorizontalOptions="Center"
+                TextColor="#243B53"/>
+   
+        <Label Text="Quarto Super Luxo:"
+                FontFamily="PassionOneRegular"
+                FontSize="20"
+                HorizontalOptions="Center"
+                TextColor="#243B53"/>
+   
+        <Image Source="quarto_superluxo.png"
+                HeightRequest="180"
+                Aspect="AspectFill" 
+                HorizontalOptions="Fill"/>
+
+        <Label Text="Quarto Standard:"
+        FontFamily="PassionOneRegular"
+        FontSize="20"
+        HorizontalOptions="Center"
+        TextColor="#243B53"/>
+        
+        <Image Source="quarto_standard.png"
+                HeightRequest="180"
+                Aspect="AspectFill" 
+                HorizontalOptions="Fill"/>
+
+        <Label Text="Quarto econômico:"
+        FontFamily="PassionOneRegular"
+        FontSize="20"
+        HorizontalOptions="Center"
+        TextColor="#243B53"/>
+        
+        <Image Source="quarto_economico.png"
+                HeightRequest="180"
+                Aspect="AspectFill" 
+                HorizontalOptions="Fill"/>
+
+    </VerticalStackLayout>
+    
+</ContentPage>
